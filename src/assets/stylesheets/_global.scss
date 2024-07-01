@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Raleway:wght@400;500;600&display=swap');
+*{
+  box-sizing: border-box;
+}
+html,body{
+  overflow-x: hidden;
+}
+body{
+
+  background-color:#F2F2F2;
+  color:$text_color;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-size: 14px;
+}
+
+a{
+  text-decoration: none;
+  color:$link_color;
+}
+p{
+  margin: 0 0 5px 0;
+}
+svg{
+  *{
+    //fill: $text_color;
+    //stroke: $text_color;
+  }
+}
+img{
+  width: 100%;
+  object-fit: cover;
+}
+.ymap{
+  width: 100%;
+}
+.text-primary{
+  color:$button_primary-color;
+}
+.text-success{
+  color:$button_success-color;
+}
+.text-danger{
+  color:$button_danger-color;
+}
+.text-info{
+  color:$button_info-color;
+}
+.text-warning{
+  color:$button_warning-color;
+}
+button{
+  border: none;
+  background-color: transparent;
+}
+.container{
+  padding: 0 15px;
+}
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  width:100%;
+  padding: 0;
+  background: $bg_color;
+  //linear-gradient($bg_color, $secondary_bg_color);
+  min-height: 100vh;
+  position: relative;
+  z-index: 2;
+
+
+  transform-origin: top left;
+  transition: transform 0.4s ease-in;
+  &.open-menu{
+    transform: translate3d(-41%, 5%, 0) scale(0.9);
+    position: fixed;
+    height: 100vh;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.04);
+  }
+}
+.svg-icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.menu-bottom{
+  position: fixed;
+  right: 15px;
+  bottom:100px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: $button_color;
+  box-shadow: $btn_shadow;
+  z-index: 200;
+  svg{
+    width: 15px;
+    height: 15px;
+    stroke: $button-text_color;
+    & *{
+      fill: $button_text_color;
+      stroke: $button_text_color;
+    }
+  }
+}
+
+.item__slider{
+  display: flex;
+  padding: 0 10px;
+  & > * {
+    height: 100%;
+  }
+}
+.opacity-1{opacity:0.1}
+.opacity-2{opacity:0.2}
+.opacity-3{opacity:0.3}
+.opacity-4{opacity:0.4}
+.opacity-5{opacity:0.5}
+.opacity-6{opacity:0.6}
+.opacity-7{opacity:0.7}
+.opacity-8{opacity:0.8}
+.opacity-9{opacity:0.9}
+.empty{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  &__text{
+    text-align: center;
+    margin-top: 20px;
+    font-size:16px;
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,39 @@
+.tab{
+  &__header{
+    display:grid;
+    grid-template-columns: repeat(1, 1fr);
+    &--1{
+      display:none;
+    }
+    &--2{
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &--3{
+      grid-template-columns: repeat(3, 1fr);
+    }
+    &--4{
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  &__header-item{
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid $secondary_bg_color;
+    box-shadow: $shadow;
+    background-color: $bg_color;
+
+    &:first-child{
+      border-radius: 8px 0 0  8px;
+    }
+    &:last-child{
+      border-radius: 0 8px 8px 0;
+      border-right: none;
+    }
+    &.active{
+      background-color: $button_color;
+      color: $button_text_color;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.socials{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  gap: 10px;
+  &__item{
+    display: flex;
+    svg{
+      height: 24px;
+      width: 24px;
+    }
+  }
+}

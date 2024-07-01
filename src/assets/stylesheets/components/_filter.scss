@@ -1,0 +1,38 @@
+.bottom-widget{
+  background: $secondary_bg_color;
+  position: fixed;
+  bottom: calc(40px - 236px);
+  left: 0;
+  width: 100%;
+  transition: bottom 0.3s ease-in;
+  color:$button_text_color;
+  svg{
+    path{
+      fill:$button_text_color;
+      stroke: $hint_color;
+    }
+  }
+  &.open{
+    bottom: 0;
+  }
+  &__header{
+    display: flex;
+    align-items: center;
+    gap:10px;
+    justify-content: center;
+    text-align: center;
+    background: $button_color;
+    border-radius: 15px 15px 0 0 ;
+    height: 40px;
+    svg{
+      width: 16px;
+      height: 16px;
+    }
+  }
+  &__body{
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+}

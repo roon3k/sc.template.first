@@ -1,0 +1,14 @@
+.banners__slider{
+  margin: 40px 0 20px;
+  display: block;
+}
+.banner{
+    width: 100%;
+    border-radius: 14px;
+    box-shadow: $shadow;
+  img{
+    border-radius: 14px;
+    height: 140px;
+    object-fit: cover;
+  }
+}

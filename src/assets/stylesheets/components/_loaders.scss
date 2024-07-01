@@ -1,0 +1,126 @@
+$animation-duration: 1.8s;
+
+.spinner {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: $bg_color;
+  &__item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 10px;
+    background: #3498DB;
+    border-radius: 5px;
+    animation: load $animation-duration ease-in-out infinite;
+
+    &:before, &:after {
+      position: absolute;
+      display: block;
+      content: "";
+      animation: load $animation-duration ease-in-out infinite;
+      height: 10px;
+      border-radius: 5px;
+    }
+
+    &:before {
+      top: -20px;
+      left: 10px;
+      width: 40px;
+      background: #EF4836;
+    }
+
+    &:after {
+      bottom: -20px;
+      width: 35px;
+      background: #F5AB35;
+    }
+  }
+}
+
+@keyframes load {
+  0% {
+    transform: translateX(40px);
+  }
+
+  50% {
+    transform: translateX(-30px);
+  }
+  100% {
+    transform: translateX(40px);
+  }
+
+}
+
+
+.loader {
+  position: absolute;
+  top: calc(50% - 32px);
+  left: calc(50% - 32px);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  perspective: 800px;
+}
+
+.inner {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.inner.one {
+  left: 0%;
+  top: 0%;
+  animation: rotate-one 1s linear infinite;
+  border-bottom: 3px solid $text_color;
+}
+
+.inner.two {
+  right: 0%;
+  top: 0%;
+  animation: rotate-two 1s linear infinite;
+  border-right: 3px solid $text_color;
+}
+
+.inner.three {
+  right: 0%;
+  bottom: 0%;
+  animation: rotate-three 1s linear infinite;
+  border-top: 3px solid $text_color;
+}
+
+
+@keyframes rotate-one {
+  0% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+  }
+}
+
+@keyframes rotate-two {
+  0% {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+  }
+}
+
+@keyframes rotate-three {
+  0% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+  }
+}
+
+

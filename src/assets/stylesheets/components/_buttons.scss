@@ -1,0 +1,107 @@
+.button{
+  border-radius: 12px;
+  background-color: $button_color;
+  color: $button_text_color;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+.button-group{
+  display: grid;
+  align-items: center;
+  width: 100%;
+  border-radius: 8px;
+  grid-template-columns: 1fr 1fr;
+  &--1{
+    grid-template-columns: 1fr;
+  }
+  .quality-control{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    &__value{
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &__value,
+    &__button{
+      width: 44px;
+      height: 44px;
+      svg{
+        width: 20px;
+        height: 20px;
+        fill: $button_text_color;
+        path{
+            stroke: $button_text_color;
+        }
+      }
+    }
+  }
+  &__button{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: $button_color;
+    color:$button_text_color;
+    border: none;
+    width: 100%;
+    height:44px;
+    font-size: 13px;
+    font-weight: bold;
+    &--success{
+      background-color: $button_success-color;
+    }
+  }
+}
+.quality-button{
+  padding: 0 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: $bg_color;
+  opacity: 0.9;
+  &__btn{
+    border:none;
+    background-color: transparent;
+    color: $text_color;
+    svg{
+      fill: $text_color;
+      stroke: $text_color;
+      width: 10px;
+      height: 10px;
+      * {
+        fill: $text_color;
+        stroke: $text_color
+      }
+    }
+  }
+  &__result{
+    text-align: center;
+    width: 25px;
+    font-size: 11px;
+    padding: 0 5px;
+  }
+}
+
+.badge{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  color: $button_text_color;
+  background-color: $button_color;
+  &--circle{
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    border-radius: 50%;
+  }
+}

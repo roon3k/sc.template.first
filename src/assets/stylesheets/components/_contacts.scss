@@ -1,0 +1,10 @@
+.contacts{
+  &__map{
+    margin-bottom: 20px;
+    & ymaps{
+      box-shadow: $shadow;
+      border-radius: 16px;
+    }
+  }
+  &__info{}
+}
